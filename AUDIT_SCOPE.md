@@ -75,7 +75,6 @@ cargo build --release
 ```sh
 cargo test -- --test-threads=1
 ./scripts/agent-preflight.sh
-tests/gates/run.sh crumb-verify
 tests/gates/run.sh fmt
 tests/gates/run.sh check
 tests/gates/run.sh clippy

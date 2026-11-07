@@ -23,9 +23,8 @@ need_protocols() {
 }
 
 case "$step" in
-  crumb-verify)
-    "${CRUMB:-crumb}" verify .
-    ;;
+  # crumb-verify (gate CRUMB-VERIFY) is retired (DRA-97, 2026-11-07): Crumbs are off the active
+  # workflow, so no gate checks crumb freshness. The .crumb files stay as history.
   fmt)
     need_protocols
     cargo fmt --all -- --check
