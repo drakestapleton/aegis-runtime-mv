@@ -1,3 +1,5 @@
+> **Research. Not part of the SI alpha and not supported.** The supported path is [Sovereign Intelligence](https://github.com/aien-dev/sovereign-intelligence). Why this repository is outside it: [feature freeze, DRA-36](https://github.com/aien-dev/sovereign-intelligence/blob/main/notes/feature-freeze.md).
+
 # aegis-runtime
 
 aegis-runtime is an agent runtime written in Rust. It builds one program, `aegis`. That program runs a local gateway (WebSocket, server-sent events and REST on port 18096), a heartbeat loop that claims and runs queued tasks, a dependency-aware task workflow, and SQLite storage. With `--inference http` it sends model calls to a local OpenAI-compatible model server. The default, `--inference embedded`, is a mock: it loads no model and ignores `--model-path` and `--tokenizer-path`.
