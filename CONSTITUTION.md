@@ -1,5 +1,7 @@
 # The Sovereign AI Constitution
 
+Statement of values. It binds no agent; RULES.md and the repository's AGENTS.md do.
+
 > **Governance Notice:** This Constitution serves exclusively as the internal architectural charter, technical doctrine, and engineering standard for the upstream AIEN Sovereign AI Ecosystem. It does not modify, condition, restrict, or supplement the licenses granted to downstream users of AIEN software under the GNU Affero General Public License, version 3 or later (AGPL-3.0-or-later). Downstream developers possess complete operational freedom without obligation to adopt, enforce, or retain this internal charter.
 
 ## Preamble
