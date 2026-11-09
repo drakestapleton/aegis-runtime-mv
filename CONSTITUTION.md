@@ -42,11 +42,11 @@ Privacy and mutual trust form the basis of open cooperation.
 3. Leaking user data or secret keys is treated as a critical defect requiring immediate remediation.
 
 ### Section 5. The One Team Principle and Reciprocal Cooperation
-1. What we discover, we share openly. What we construct in software, we release under the GNU Affero General Public License, version 3 or later (AGPL-3.0-or-later), so that improvements stay open.
-2. Knowledge must remain accessible to the human family. We share tools freely with individuals, startups, and community builders while encouraging reciprocal weight transparency and distillation access from frontier laboratories.
-3. Upstream contributions are foundational: any public open-source project adapted to run on our stack is contributed back upstream. We never hoard fixes or improvements.
+1. What I discover, I share openly. What I construct in software, I release under the GNU Affero General Public License, version 3 or later (AGPL-3.0-or-later), so that improvements stay open.
+2. Knowledge must remain accessible to the human family. I share tools freely with individuals, startups, and community builders while encouraging reciprocal weight transparency and distillation access from frontier laboratories.
+3. Upstream contributions are foundational: any public open-source project adapted to run on my stack is contributed back upstream. I never hoard fixes or improvements.
 4. Voluntary Bilateral Cooperation and Reciprocal Commons:
-Hardware manufacturers (including NVIDIA, AMD, Intel, Apple) and compute providers (such as RunPod, Lambda, and independent data centers) may adopt, embed, and deploy our runtime stack under the GNU Affero General Public License, version 3 or later (AGPL-3.0-or-later) to improve hardware efficiency, eliminate memory overhead, and expand bandwidth for developers.
+Hardware manufacturers (including NVIDIA, AMD, Intel, Apple) and compute providers (such as RunPod, Lambda, and independent data centers) may adopt, embed, and deploy my runtime stack under the GNU Affero General Public License, version 3 or later (AGPL-3.0-or-later) to improve hardware efficiency, eliminate memory overhead, and expand bandwidth for developers.
 For organizations seeking deeper bilateral research cooperation, model weight transparency, distillation reciprocity, or joint compute pooling, the voluntary terms of [OPEN_COOPERATION_COVENANT.md](https://github.com/aien-dev/aien-sovereign-core-mv/blob/main/OPEN_COOPERATION_COVENANT.md) provide a collaborative framework.
 
 ### Section 6. The Contributor Oath
@@ -103,7 +103,7 @@ To maintain code quality, security, and mutual trust:
    - **Stylistic and Unslop Standards (Core Standards & Community Advisory)**: The unslop invariant is enforced across core repositories, internal agents, and official releases. For outside community pull requests, style audits provide automated formatting suggestions rather than immediate rejection.
 2. **Integrity of Purpose**: Submissions attempting to introduce surveillance hooks, covert tracking SDKs, or extractive lock-in mechanisms will be rejected.
 3. **Open Downstream Freedom**: Downstream users, forks, and commercial builders operate with complete legal freedom under the terms of the GNU Affero General Public License, version 3 or later (AGPL-3.0-or-later).
-4. **Craftsmanship and Humility**: We respect those who measure, improve, standardize, verify, and deliver tools that run reliably without supervision.
+4. **Craftsmanship and Humility**: I respect those who measure, improve, standardize, verify, and deliver tools that run reliably without supervision.
 
 ---
 
