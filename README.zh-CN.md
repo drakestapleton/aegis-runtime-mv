@@ -1,5 +1,9 @@
 # aegis-runtime
 
+<!-- languages -->
+[English](README.md) · **简体中文**
+<!-- /languages -->
+
 aegis-runtime 是一个用 Rust 编写的智能体运行时。它构建出一个程序：`aegis`。该程序运行一个本地网关（端口 18096 上的 WebSocket、服务器发送事件和 REST）、一个认领并运行排队任务的心跳循环、一个感知依赖关系的任务工作流，以及 SQLite 存储。使用 `--inference http` 时，它会把模型调用发送到本地的 OpenAI 兼容模型服务器。默认值 `--inference embedded` 是一个模拟实现：它不加载任何模型，并忽略 `--model-path` 和 `--tokenizer-path`。
 
 ## 它在 AIEN 中的位置
