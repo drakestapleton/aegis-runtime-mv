@@ -1,7 +1,3 @@
-<!-- languages -->
-**English** · [简体中文](README.zh-CN.md)
-<!-- /languages -->
-
 # aegis-runtime
 
 aegis-runtime is an agent runtime written in Rust. It builds one program, `aegis`. That program runs a local gateway (WebSocket, server-sent events and REST on port 18096), a heartbeat loop that claims and runs queued tasks, a dependency-aware task workflow, and SQLite storage. With `--inference http` it sends model calls to a local OpenAI-compatible model server. The default, `--inference embedded`, is a mock: it loads no model and ignores `--model-path` and `--tokenizer-path`.
