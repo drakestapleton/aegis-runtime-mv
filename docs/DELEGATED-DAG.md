@@ -1,6 +1,6 @@
 # Delegated DAG: one authority per fact (issue #54, lane G1)
 
-**Status:** DRAFT. Sections 3 and 4 hold decisions that are **proposed, awaiting owner acknowledgement** from the aien-sovereign-core#379 owner and the AIENOS owner. Until both acknowledge on the PR, nothing here is accepted and no recovery code may treat it as settled.
+**Status:** DRAFT. Sections 3 and 4 hold decisions that are **proposed, awaiting owner acknowledgement** from the aien-sovereign-core#379 owner and the Aienux owner. Until both acknowledge on the PR, nothing here is accepted and no recovery code may treat it as settled.
 
 Parent: aien-dev/aegis-runtime-mv#53 (lane G of aien-dev/aien-architecture-mv#231). Wire format: PST1 Draft v0, aien-protocols `specs/pi-spark-task/SPEC.md` (aien-dev/aien-protocols-mv#34, branch `integ/allen-pispark-lane-c`).
 
@@ -21,7 +21,7 @@ Read on 2026-10-16. Each line names what the code says, not what a plan says.
 | aien-sovereign-core `crates/aien-runtime/src/effects.rs` | Durable effect intents on the compose home's Cortex journal, states OPEN, DONE, NOT_DONE, UNRESOLVED. The world decides the state. An effect is never re-run by that module; a retry after NOT_DONE needs a new authorization. Grants are journal records (`approved_grant`, `minted_grant`) and, since sovereign-core #408, may be bound to an objective record (`GrantObjective`), re-checked before every intent. Refusals by name: `NotAuthorized`, `AlreadySpent`, `ReconciliationRequired`, `Stopped`, `ObjectiveMissing`, `ObjectiveMismatch`. |
 | aien-sovereign-core `crates/aien-mcp/src/approval.rs` | A second desk, `ApprovalDesk`, for the MCP effect lane. Grants are bound to an intent digest, idempotency key, world and J-node, and live in memory only: a restart forgets every grant. |
 | aien-dev/aien-sovereign-core-mv#379 (open) | No durable objective record with its planned effects, no `resume-objective` command. Its text says "grants live in memory only"; that is true of the MCP desk, not of the compose ledger grants above (finding F1 below). |
-| AIENOS `docs/adr/0018-allen-subject-state-object.md` | The subject's standing intents are 96-byte rows with a `kind` and a payload of two u64 values. v0 defines one kind, `GOAL_LATENCY`. At most one ACTIVE intent per (kind, payload[0]) slot. |
+| Aienux `docs/adr/0018-allen-subject-state-object.md` | The subject's standing intents are 96-byte rows with a `kind` and a payload of two u64 values. v0 defines one kind, `GOAL_LATENCY`. At most one ACTIVE intent per (kind, payload[0]) slot. |
 | aien-architecture `docs/hardening/causal-id-join-v0.md` sections 2.1 and 2.3 (DRAFT) | One 32-byte cause id, minted where the outside request enters AIEN, copied across every handoff and never minted again. |
 | PST1 Draft v0 sections 4, 5, 8 | Header carries `cause_id`, `origin_run_id`, `objective_id`, `subject_id`, `parent_task_id`, `task_id`, `idempotence_key`, `effect_class`. Status comes from authoritative state on the Spark. Uncertain effects are reconciled against the sovereign-core effect ledger before any retry. |
 
@@ -60,7 +60,7 @@ The recovery code (G3, aegis-runtime-mv#56) follows these rules. A missing point
 
 ## 4. Proposed decisions (awaiting owner acknowledgement)
 
-Each decision is **proposed, awaiting owner acknowledgement**. Acknowledgement requests: aien-dev/aien-sovereign-core-mv#379 (sovereign-core owner, D1 to D4) and aien-dev/aienos-mv#399 (AIENOS owner, D1).
+Each decision is **proposed, awaiting owner acknowledgement**. Acknowledgement requests: aien-dev/aien-sovereign-core-mv#379 (sovereign-core owner, D1 to D4) and aien-dev/aienos-mv#399 (Aienux owner, D1).
 
 ### D1. Where the Pi-side objective lives (proposed)
 
