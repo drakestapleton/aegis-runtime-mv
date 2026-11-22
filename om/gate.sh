@@ -22,9 +22,10 @@ build_det aegis_main om/om2.om om/sha2.om om/dag.om om/heartbeat.om om/policy.om
 printf "INIT 4 10 5\nTOKEN aegis_operator_secret_token_012345\nREQ GET /health -\nVERIFY\nQUIT\n" | "$SCR/aegis_main.1"
 
 # Planted mutant control: weaken unconfigured-token refusal -> aegis_test MUST fail
-sed "s/ret POL_DENY_NO_TOKEN/ret POL_ALLOW/" om/policy.om > "$SCR/policy_mut.om"
+sed "s/ret POL_DENY_NO_TOKEN_CONFIG/ret POL_ALLOW/" om/policy.om > "$SCR/policy_mut.om"
 cat om/om2.om om/sha2.om om/dag.om om/heartbeat.om "$SCR/policy_mut.om" om/journal.om om/gateway.om om/test.om > "$SCR/mut.om"
-"$OMC" < "$SCR/mut.om" > "$SCR/mut.bin" && chmod +x "$SCR/mut.bin"
+"$OMC" < "$SCR/mut.om" > "$SCR/mut.bin" || { echo "FAIL mutant failed to compile"; exit 1; }
+chmod +x "$SCR/mut.bin"
 if "$SCR/mut.bin" >/dev/null 2>&1; then
   echo "FAIL mutant escaped"
   exit 1
